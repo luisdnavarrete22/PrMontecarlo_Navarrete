@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte carlo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<header>
+    <script src="js/alertMessage.js"></script> 
+    <div class="Encabezado" >
+        <h1><center><strong>Práctica Montecarlo (Evaluación 21/07/2022)</strong></center></h1>
+        
+    </div>
+</header>
+<br><br>
+<body >
+    <h4 class="card-title" align="left">Realizado por: Navarrete Cevallos Luis David</h4>
+    <h4 class="card-title" align="left">Curso: 6to Nivel Paralelo "B"</h4>
+    <h4 class="card-title" align="left">Asignatura: Modelamiento y Simulación</h4>
+    <h4 class="card-title" align="left">Docente: Jorge Aníbal Moya Delgado</h4>
+    <div class="Container">
+
+    <div class="Pregunta1">
+        <h2><center><strong>Ejercicio N°1 (autos)</strong></center></h2>
+        <p style='text-align: justify;' >
+            <strong>
+                Tratando de determinar el número óptimo de autos comprar. 
+                El costo promedio anual de un auto es de 75.000 dolares. Además, está compañía ha recopilado 
+                las siguientes probabilidades de operación:
+            </strong>
+        </p>
+        <br>
+        <br>
+
+        <p style='text-align: justify;'>
+            <strong>
+                Si el alquiler diario por auto es de 700 dolares, el costo de no tener un auto disponible 
+                cuando se solicita es de 400 dolares y el costo de tener un auto ocioso durante un día es de
+                100 dolares, ¿cuál es la cantidad de autos que debería comprar la compañía?  Asuma que un auto 
+                que se alquila está disponible al día siguiente.
+            </strong>
+        </p>
+        <p style='text-align: justify;'>
+            <strong>
+                Simule el sistema para un año de 360 días (para la evaluación 15 días de funcionamiento) y 
+                muestre un análisis de costos de los 15 días simulados.
+            </strong>
+        </p>
+    </div>
+    <br>
+    <h2><center><strong>Análisis y operación de resultados: </strong></center></h2>
+    <br>
+    <p style='text-align: justify;'>Se añade P. Acumulada como columna.</p>
+    <div>
+        <table class="table table-responsive " >
+            <thead>
+                <tr>
+                    <th>N-Dias de alquiler por auto</th>
+                    <th>Probabilidad </th>
+                    <th>P. Acumulada/th>
+                    <th>Min</th>
+                    <th>Min.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>0.4</td>
+                    <td>0.4</td>
+                    <td>0</td>
+                    <td>0.4</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0.35</td>
+                    <td>0.75</td>
+                    <td>0.41</td>
+                    <td>0.75</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0.15</td>
+                    <td>0.9</td>
+                    <td>0.76</td>
+                    <td>0.9</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>0.1</td>
+                    <td>1</td>
+                    <td>0.91</td>
+                    <td>1</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    <br><br>
+    <p style='text-align: justify;'>Se realiza la simulación de Montecarlo.</p>
+    <div>
+        <table class="table table-responsive " >
+            <thead>
+                <tr>
+                    <th>Evento</th>
+                    <th>N-aleatorios Autos</th>
+                    <th>N-aleatorios Dias</th>
+                    <th>Autos Alquilados</th>
+                    <th>Días Alquilados</th>
+                    <th>Valor de Alquilar Autos</th>
+                    <th>Costo de no tener Auto </th>
+                    <th>Costo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>0.13089</td>
+                    <td>0.66119</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>700</td>
+                    <td>400</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>0.96696</td>
+                    <td>0.97184</td>
+                    <td>0</td>
+                    <td>4</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>0.78853</td>
+                    <td>0.30863</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>0.88534</td>
+                    <td>0.65890</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>0.51116</td>
+                    <td>0.77847</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>0.36096</td>
+                    <td>0.28647</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>0.69644</td>
+                    <td>0.65420</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>0.79794</td>
+                    <td>0.00786</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>0.87306</td>
+                    <td>0.51109</td>
+                    <td>4</td>
+                    <td>2</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>0.29751</td>
+                    <td>0.30685</td>
+                    <td>2</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>0.95052</td>
+                    <td>0.06456</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>0.70872</td>
+                    <td>0.55139</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>0.93587</td>
+                    <td>0.29237</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>0.16929</td>
+                    <td>0.04104</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>700</td>
+                    <td>400</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>0.62718</td>
+                    <td>0.09312</td>
+                    <td>3</td>
+                    <td>1</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4><strong>Conclusión:</strong> Los resultados han sido demostrados en el notebook de Jupyter, es por ello que se concluye que:
+        La empresa debería tener en cuenta que si ejecutamos una simulación desde el 1 al 3 tendríamos ganancias, mientras que con 4 empezamos a tener pérdidas, es por ello que:
+        Resulta más beneficios económicamente el tener dos autos, al que tener 3 y/o 1.</h4>
+    <br><br>
+    
+        <br><br>
+
+    <div class="Pregunta2">
+        <h2><center><strong>Ejercicio N°2 (grupos y horas de trabajo)</strong></center></h2>
+        <p style='text-align: justify;'>
+            <strong>
+                Los vehículos de una planta están sometidos a mantenimiento preventivo. Todas las labores de 
+                mantenimiento pueden ser efectuadas por un hombre, pero en algunos casos el trabajo puede ser 
+                realizado en menos tiempo por un equipo de dos hombres. Con un solo hombre el tiempo para 
+                efectuar el mantenimiento de un vehículo son: 1,25; 1,50; 1,75; ó 2 horas con probabilidades 
+                de 0,15; 0,25; 0,40; y 0,20 respectivamente. Con dos hombres se requieren 0,50; 0,75; 1,00; 
+                ó 1,25 horas con probabilidades de 0,25; 0,35; 0,30; y 0,10 respectivamente. Cada miembro del 
+                equipo recibe un pago de 4.50 dolares por hora y un sobresueldo de 1 dolar por hora por equipo. 
+                Utilizando los siguientes números aleatorios, determinar si el mantenimiento es más económico 
+                con un solo hombre o con el equipo de dos hombres.
+            </strong>
+        </p>
+        <br>
+        <br>
+        <h2><center><strong>Análisis y operación de resultados: </strong></center></h2>
+        <p style='text-align: justify;'>
+            <strong>
+                Nota: 1era fila 1 hombre, segunda 2 hombres.
+            </strong>
+        </p>
+        <br>
+        <br>
+        <h2><center><strong>Cuadro de probabilidades con un hombre:</strong></center></h2>
+    </div>
+    <div>
+        <div>
+            <table class="table table-responsive " >
+                <thead>
+                    <tr>
+                        <th>Tiempo en Horas</th>
+                        <th>Probabilidad </th>
+                        <th>P. Acumuladas</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1.25</td>
+                        <td>0.15</td>
+                        <td>0.15</td>
+                        <td>0</td>
+                        <td>0.15</td>
+                    </tr>
+                    <tr>
+                        <td>1,50</td>
+                        <td>0.25</td>
+                        <td>0.40</td>
+                        <td>0.16</td>
+                        <td>0.40</td>
+                    </tr>
+                    <tr>
+                        <td>1.75</td>
+                        <td>0.40</td>
+                        <td>0.80</td>
+                        <td>0.41</td>
+                        <td>0.80</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1.25</td>
+                        <td>1</td>
+                        <td>0.81</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+        <h2><center><strong>Simulación con un hombre:</strong></center></h2>
+        <br>
+
+        <div>
+            <table class="table table-responsive " >
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Num. Aleatorios</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0.38</td>
+                        <td>1.50</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0.89</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>0.40</td>
+                        <td>1.50</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>0.02</td>
+                        <td>1.24</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>0.99</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>0.37</td>
+                        <td>1.50</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>0.46</td>
+                        <td>1.75</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>0.25</td>
+                        <td>1.50</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>0.02</td>
+                        <td>1.24</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>0.20</td>
+                        <td>1.50</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <br><br>
+        <h2><center><strong>Cuadro de probabilidades con dos hombres:</strong></center></h2>
+        
+        <div>
+            <table class="table table-responsive " >
+                <thead>
+                    <tr>
+                        <th>Tiempo en Horas</th>
+                        <th>Probabilidad </th>
+                        <th>P. Acumuladas</th>
+                        <th>Min</th>
+                        <th>Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0.50</td>
+                        <td>0.25</td>
+                        <td>0.25</td>
+                        <td>0</td>
+                        <td>0.25</td>
+                    </tr>
+                    <tr>
+                        <td>0.75</td>
+                        <td>0.35</td>
+                        <td>0.60</td>
+                        <td>0.26</td>
+                        <td>0.60</td>
+                    </tr>
+                    <tr>
+                        <td>1.00</td>
+                        <td>0.30</td>
+                        <td>0.90</td>
+                        <td>0.61</td>
+                        <td>0.90</td>
+                    </tr>
+                    <tr>
+                        <td>1.25</td>
+                        <td>0.10</td>
+                        <td>1</td>
+                        <td>0.91</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br><br>
+        
+        <h2><center><strong>Simulación con dos hombres:</strong></center></h2>
+
+        <div>
+            <table class="table table-responsive " >
+                <thead>
+                    <tr>
+                        <th>Evento</th>
+                        <th>Num. Aleatorios</th>
+                        <th>Horas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>0.78</td>
+                        <td>1.00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>0.92</td>
+                        <td>1.25</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>0.34</td>
+                        <td>0.75</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>0.91</td>
+                        <td>1.25</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>0.43</td>
+                        <td>0.75</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>0.59</td>
+                        <td>0.75</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>0.66</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>0.16</td>
+                        <td>0.50</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>0.34</td>
+                        <td>0.75</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>0.87</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h4><strong>Conclusión:</strong> Como pudimos operar y ver, cuando se trabaja con un solo hombre se paga la cantidad 
+            de 112.5 USD mientras que cuando se trabaja con equipos de dos hombres se paga la cantidad de 132.5 USD, entonces... 
+            Podemos llegar a la conclusión de que el mantenimiento resulta más económico cuando se trabaja con un solo hombre, 
+            ya que se paga menos que cuando se trabaja con equipos de dos hombres.</h4>
+
+        <br>
+        <br><br>
+
+    </div>
+    </div>
+</body>
+
+</html>

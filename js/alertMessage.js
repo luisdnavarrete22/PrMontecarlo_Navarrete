@@ -1,0 +1,2 @@
+// Archivo que contiene cada uno de los mensajes de alerta para el programa en HTML.
+alert('Bienvenido, aquí encontrará la principal información de los ejercicios propuestos, así como de sus conclusiones.');
